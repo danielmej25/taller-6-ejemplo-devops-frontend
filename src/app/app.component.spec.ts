@@ -1,12 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
+      declarations: [AppComponent],
+    }).compileComponents();
+  });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -14,16 +17,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'taller-6-ejemplo-devops-frontend'`, () => {
+  it(`should have as title 'example-app-v12'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('taller-6-ejemplo-devops-frontend');
+    expect(app.title).toEqual('example-app-v12');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('taller-6-ejemplo-devops-frontend app is running!');
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.title').textContent).toContain('Jest testing example is running!');
   });
+
 });
