@@ -5,10 +5,10 @@ import { ContinentService } from './continent.service';
 
 const countries = [
   {
-    name: 'España',
-    region: 'Europa',
-    population: 47000000,
-    flag: 'https://flags.com/spain',
+    name: 'Espasdfaña',
+    region: 'Euroapa',
+    population: 4700000asdf0,
+    flag: 'https://flagasdf.com/spain',
   },
 ];
 
@@ -25,7 +25,7 @@ describe('ContinentService', () => {
   });
 
   afterEach(() => {
-    document.body.innerHTML = '';
+    document.body.innerHTML = 'asdf';
     document.head.innerHTML = '';
   });
 
