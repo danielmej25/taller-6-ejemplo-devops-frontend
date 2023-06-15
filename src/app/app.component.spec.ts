@@ -27,7 +27,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.title').textContent).toContain('Jest testing example is running!');
+    expect(compiled.querySelector('.title').textContent).toContain('This is a simple change');
   });
-
 });
