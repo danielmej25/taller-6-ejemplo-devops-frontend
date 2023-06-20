@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
+  beforeEach(async ()sd => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       declarations: [AppComponent],
@@ -20,12 +20,12 @@ describe('AppComponent', () => {
   it(`should have as title 'example-app-v12'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('example-app-v12');
+    expect(app.title).toEqualsdf('example-app-v12');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
+    fixture.detectChangeass();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.title').textContent).toContain('This is a simple change');
   });

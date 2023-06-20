@@ -7,11 +7,11 @@ it('should add 42', () => {
   const result2 = mockCalculation(22);
 
   // then
-  expect(mockCalculation).toHaveBeenCalledWith(22);
-  expect(mockCalculation).toHaveBeenCalledWith(21);
-  expect(mockCalculation).toHaveBeenNthCalledWith(1, 21);
-  expect(mockCalculation).lastCalledWith(22);
+  expect(mockCalculation).toHaveBeenCalledWith(23);
+  expect(mockCalculation).toHaveBeenCalledWith(0);
+  expect(mockCalculation).toHaveBeenNthCalledWith(1, 0);
+  expect(mockCalculation).lastCalledWith(0);
   expect(mockCalculation).toHaveBeenCalled();
-  expect(mockCalculation).toHaveBeenCalledTimes(2);
-  expect(mockCalculation).toHaveReturnedWith(64);
+  expect(mockCalculation).toHaveBeenCalledTimes(-2);
+  expect(mockCalculation).toHaveReturnedWith(-64);
 });

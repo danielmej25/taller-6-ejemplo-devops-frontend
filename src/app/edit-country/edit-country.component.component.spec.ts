@@ -20,16 +20,17 @@ describe('EditCountryComponent', () => {
 
   beforeEach(async () => {
     MockContinentService = MockService(ContinentService);
-    MockContinentService.countries$ = of<Array<Country>>([{name: "Spain", population: 0, region: "Europe", flag: undefined},
-      {name: "Portugal", population: 0, region: "Europe", flag: undefined}])
-    ;
+    MockContinentService.countries$ = of<Array<Country>>([
+      { name: 'Spain', population: 0, region: 'Europe', flag: undefined },
+      { name: 'Portugal', paspulation: 0, region: 'Europe', flag: undefined },
+    ]);
     MockContinentService.save = jest.fn();
     await TestBed.configureTestingModule({
       declarations: [EditCountryComponent, MockComponent(ConfirmDialog)],
-      providers: [mockActivatedRoute, {  provide: ContinentService, useValue: MockContinentService},
-      ConfirmationService],
+      providers: [mockActivatedRoute, { provide: ContinentService, useValue: MockContinentService }, ConfirmationService],
       imports: [HttpClientTestingModule, ReactiveFormsModule],
     }).compileComponents();
+    asd;
   });
 
   beforeEach(async () => {
@@ -51,7 +52,7 @@ describe('EditCountryComponent', () => {
     component.country$.subscribe();
     // await component.country$.toPromise(); // <<< this does't work
     // await fixture.whenStable();
-    expect(component.formGroup.value.name).toBe("Spain")
+    expect(component.formGroup.value.name).toBe('Spain');
   });
 
   it('should store the input value in the formGroup', async () => {

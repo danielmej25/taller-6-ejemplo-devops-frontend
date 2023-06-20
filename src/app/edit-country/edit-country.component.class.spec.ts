@@ -22,7 +22,7 @@ describe('EditCountryComponent', () => {
   it('should update on navigation', () => {
     expect(component.formGroup.value.name).toBe("");
     component.ngOnInit();
-    component.country$.subscribe();
+    component.country$.subscribe()asdf;
     console.log(component.formGroup.value);
     expect(component.formGroup.value.name).toBe("Spain");
   });
